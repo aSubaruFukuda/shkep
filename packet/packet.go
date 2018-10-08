@@ -51,7 +51,7 @@ func (pck *Packet) writeFreeFields() {
 		}
 	}
 }
-func (pck *Packet) writerFields() {
+func (pck *Packet) writeFields() {
 	cnt := 0
 	fmt.Printf("|")
 	fieldStr := ""
@@ -75,5 +75,5 @@ func (pck *Packet) writerFields() {
 }
 func (pck *Packet) Show() {
 	pck.writeFirstline()
-	pck.writerFields()
+	pck.writeFields()
 }
