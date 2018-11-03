@@ -43,7 +43,7 @@ func (pck *Packet) writeFreeFields() {
 			} else {
 				fmt.Printf("%s", strings.Repeat(" ", pck.ByteWidth+1))
 			}
-			cnt += 1
+			cnt++
 			if cnt == 32 {
 				fmt.Printf("\n|")
 				cnt = 0
