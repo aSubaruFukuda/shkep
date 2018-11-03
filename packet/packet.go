@@ -31,7 +31,7 @@ func (pck *Packet) writeFirstline() {
 		fmt.Printf("%s", byteStr)
 		fmt.Printf("|")
 	}
-	fmt.Printf("\n")
+	fmt.Printf("\n|%s|\n", strings.Repeat("-", pck.ByteWidth*32+31))
 }
 func (pck *Packet) writeFreeFields() {
 	cnt := 0
@@ -66,7 +66,7 @@ func (pck *Packet) writeFields() {
 			}
 			cnt++
 			if cnt == 32 {
-				fmt.Printf("\n|")
+				fmt.Printf("\n|%s|\n|", strings.Repeat("-", pck.ByteWidth*32+31))
 				cnt = 0
 			}
 		}
