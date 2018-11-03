@@ -21,7 +21,7 @@ func main() {
     packet.Field{16, "checksum"},
     packet.Field{16, "urgent pointer"},
   }
-  byteWidthForRendering:=4
+  byteWidthForRendering := 4
   tcpPacket := packet.NewPacket(tcpFields, byteWidthForRendering)
   tcpPacket.Show()
 }
